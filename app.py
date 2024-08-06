@@ -9,7 +9,7 @@ import numpy as np
 from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
 
 # Load the dataset
-file_path = '/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_cancer/cleaned/df_cleaned.csv'
+file_path = '/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_superMarket/df_cleaned.csv'
 df = pd.read_csv(file_path)
 
 # Convert the date column to datetime format
