@@ -1,0 +1,7 @@
+streamlit
+pandas
+matplotlib
+scikit-learn
+matplotlib.pyplot
+numpy
+Python 3.11.5
