@@ -9,7 +9,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split, GridSearchCV, RandomizedSearchCV
 
 # Load the dataset
-file_path = '/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_cancer/Dataset/cleaned/df_cleaned.csv'
+file_path = '/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_superstore/Dataset/cleaned/df_cleaned.csv'
 df = pd.read_csv(file_path)
 
 # Convert the date column to datetime format
@@ -70,10 +70,12 @@ st.sidebar.title("Navigation")
 pages = st.sidebar.radio("Go to", ["Introduction", "EDA", "Modeling", "Forecasting", "Conclusion"])
 
 st.sidebar.markdown("### Authors")
-st.sidebar.image('/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_cancer/my pic/Mustafa HS2.jpg', width=100)
+st.sidebar.image('/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_cancer/my pic/Mustafa HS2.jpg', width=150)
 st.sidebar.markdown("[Mustafa Adabbas](https://www.linkedin.com/in/mustafa-aldabbas-85256b95/)")
 st.sidebar.markdown("[LinkedIn](https://www.linkedin.com/in/mustafa-aldabbas-85256b95/)")
+st.sidebar.image('/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_superMarket/my pic/cv photo .jpg', width=150)
 st.sidebar.markdown("Natalia Gravereuaux")
+st.sidebar.markdown("[LinkedIn](https://www.linkedin.com/in/nmikh/)")
 
 # Download button function
 def download_button(df, filename, label):
