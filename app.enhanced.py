@@ -70,10 +70,10 @@ st.sidebar.title("Navigation")
 pages = st.sidebar.radio("Go to", ["Introduction", "EDA", "Modeling", "Forecasting", "Conclusion"])
 
 st.sidebar.markdown("### Authors")
-st.sidebar.image('/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_cancer/my pic/Mustafa HS2.jpg', width=150)
+st.sidebar.image('/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_superstore/my pic/Mustafa HS2.jpg', width=150)
 st.sidebar.markdown("[Mustafa Adabbas](https://www.linkedin.com/in/mustafa-aldabbas-85256b95/)")
 st.sidebar.markdown("[LinkedIn](https://www.linkedin.com/in/mustafa-aldabbas-85256b95/)")
-st.sidebar.image('/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_superMarket/my pic/cv photo .jpg', width=150)
+st.sidebar.image('/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_superstore/my pic/cv photo .jpg', width=150)
 st.sidebar.markdown("Natalia Gravereuaux")
 st.sidebar.markdown("[LinkedIn](https://www.linkedin.com/in/nmikh/)")
 
