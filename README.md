@@ -17,8 +17,8 @@ Dataset https://www.kaggle.com/datasets/arunjangir245/super-market-sales
 The dataset used in this project includes retail sales data from a global superstore over four years. The data was cleaned and preprocessed to facilitate analysis and modeling.
 
 ## EDA
-[Gross Income Over Time](https://www.kaggle.com/datasets/bryan2k19/dutch-house-prices-dataset](https://github.com/MustafaAldabbas/Machine_learning_superstore/blob/main/my%20pic/viz_gross_income_per_day.png) 
-[Seasonal Decomposition](https://github.com/MustafaAldabbas/Machine_learning_superstore/blob/main/my%20pic/seasonal_decomposition.png)
+![Gross Income Over Time](https://github.com/MustafaAldabbas/Machine_learning_superstore/blob/main/my%20pic/viz_gross_income_per_day.png) 
+![Seasonal Decomposition](https://github.com/MustafaAldabbas/Machine_learning_superstore/blob/main/my%20pic/seasonal_decomposition.png)
 
 ## Feature Engineering and Selection
 
