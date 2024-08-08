@@ -2,6 +2,7 @@
 # Retail Sales Forecasting
 ## Author 
 * Mustafa Aldabbas, connect with me on [LinkedIn](https://www.linkedin.com/in/mustafa-aldabbas-85256b95/), [on X](https://x.com/Mustafa_dabbas)
+* Natalia Mikhieieva
 
 ## Project Overview
 
