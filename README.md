@@ -2,14 +2,23 @@
 # Retail Sales Forecasting
 ## Author 
 * Mustafa Aldabbas, connect with me on [LinkedIn](https://www.linkedin.com/in/mustafa-aldabbas-85256b95/), [on X](https://x.com/Mustafa_dabbas)
+* Natalia Gravereaux
 
 ## Project Overview
 
-This project aims to perform time series analysis and predict the sales for the next 7 days using retail data from a global superstore. We applied various machine learning models to achieve this objective, including K-Nearest Neighbors, Decision Tree, Random Forest, and Gradient Boosting.
+This project aims to perform time series analysis and predict the sales for the next 7 days using retail data from a global superstore.
+Branches A, B, C
+Transactions from 01-01-2019 to 30-03-2019
+
+Dataset https://www.kaggle.com/datasets/arunjangir245/super-market-sales
 
 ## Data Selection and Preparation
 
 The dataset used in this project includes retail sales data from a global superstore over four years. The data was cleaned and preprocessed to facilitate analysis and modeling.
+
+## EDA
+![Gross Income Over Time](https://github.com/MustafaAldabbas/Machine_learning_superstore/blob/main/my%20pic/gross_income__over_time.png)
+![Seasonal Decomposition](https://github.com/MustafaAldabbas/Machine_learning_superstore/blob/main/my%20pic/seasonal_decomposition.png)
 
 ## Feature Engineering and Selection
 
@@ -18,10 +27,38 @@ We extracted features such as year, month, and day from the date column to be us
 ## Model Building and Evaluation
 
 We experimented with several models:
-- **Decision Tree Regressor**
-- **Random Forest Regressor**
-- **Gradient Boosting Regressor**
-- **K-Nearest Neighbors Regressor**
+- Linear Regression 
+- Gradient Boosting (Ensemble)
+- CatBoost (Ensemble)
+- XGBoost (Ensemble)
+- Random Forest  (Ensemble)
+- LightGBM (Ensemble)
+- Decision Tree 
+- K-Nearest Neighbors 
+- ARIMA 
+- LSTM
+
+### Feature engineering techniques applied
+- *1.  Date and Time Feature Engineering:*
+Extracting Components: Extract year, month, day, hour, day of the week, or even day of the year from a date-time feature.
+
+- *2. Aggregating Features:*
+Aggregate Data for Each Branch:
+groupby('date')
+
+- *3. Encoding Categorical Variables:*
+One-Hot Encoding: Convert categorical variables into a series of binary columns. (['branch'])
+
+- *4. Shift Lag and Rolling Lag Moving Average*
+ ['quantity_lag1'] , ['unit_price_lag1'] 
+Functionality:
+shift(1): This function shifts the values in the column down by 1 row. The new column will have the value from the previous row in the corresponding original column.
+quantity_lag1: This new column contains the value of quantity from the previous row.
+unit_price_lag1: Similarly, this new column contains the value of unit_price from the previous row.
+
+- *5. Transform 'Day' Column into Sine and Cosine Components*
+Functionality:By transforming the day values into sine and cosine components, you map the cyclic feature onto a circular space. The sine and cosine transformations ensure that the model understands the cyclical nature of the feature.
+
 
 ### Model Performance
 
@@ -46,7 +83,8 @@ We performed hyperparameter tuning to optimize the models:
 
 ## Forecasting
 
-Using the K-Nearest Neighbors Regressor, which showed the best performance, we forecasted sales for the next 7 days.
+Using the Linear Regression, which showed the best performance, we forecasted sales for the next 7 days.
+![Seasonal Decomposition](https://github.com/MustafaAldabbas/Machine_learning_superstore/blob/main/my%20pic/viz_gross_income_per_day.png)
 
 ## Streamlit App
 
@@ -54,7 +92,7 @@ We developed a Streamlit app to present the project interactively. The app inclu
 
 ## Key Findings and Insights
 
-- **Best Model:** K-Nearest Neighbors Regressor
+- **Best Model:** Linear Regression
 - **Key Features:** Year, month, and day extracted from the date column were effective features for predicting sales.
 
 ## Real-World Application and Impact
@@ -82,10 +120,3 @@ This model can help retail stores forecast future sales, enabling better invento
    streamlit run app.py
    ```
 
-## Authors
-
-- [Your Name]
-
-## License
-
-This project is licensed under the MIT License.
