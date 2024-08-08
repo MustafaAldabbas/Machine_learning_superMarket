@@ -17,7 +17,8 @@ Dataset https://www.kaggle.com/datasets/arunjangir245/super-market-sales
 The dataset used in this project includes retail sales data from a global superstore over four years. The data was cleaned and preprocessed to facilitate analysis and modeling.
 
 ## EDA
-[Gross Income Over Time]([[https://www.kaggle.com/datasets/bryan2k19/dutch-house-prices-dataset](https://github.com/MustafaAldabbas/Machine_learning_superstore/blob/main/my%20pic/viz_gross_income_per_day.png)]) 
+[Gross Income Over Time](https://www.kaggle.com/datasets/bryan2k19/dutch-house-prices-dataset](https://github.com/MustafaAldabbas/Machine_learning_superstore/blob/main/my%20pic/viz_gross_income_per_day.png) 
+[Seasonal Decomposition](https://github.com/MustafaAldabbas/Machine_learning_superstore/blob/main/my%20pic/seasonal_decomposition.png)
 
 ## Feature Engineering and Selection
 
@@ -55,7 +56,7 @@ shift(1): This function shifts the values in the column down by 1 row. The new c
 quantity_lag1: This new column contains the value of quantity from the previous row.
 unit_price_lag1: Similarly, this new column contains the value of unit_price from the previous row.
 
-- 5. *Transform 'Day' Column into Sine and Cosine Components*
+- *5. Transform 'Day' Column into Sine and Cosine Components*
 Functionality:By transforming the day values into sine and cosine components, you map the cyclic feature onto a circular space. The sine and cosine transformations ensure that the model understands the cyclical nature of the feature.
 
 
