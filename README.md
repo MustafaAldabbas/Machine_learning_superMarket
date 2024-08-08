@@ -17,7 +17,7 @@ Dataset https://www.kaggle.com/datasets/arunjangir245/super-market-sales
 The dataset used in this project includes retail sales data from a global superstore over four years. The data was cleaned and preprocessed to facilitate analysis and modeling.
 
 ## EDA
-![Gross Income Over Time](https://github.com/MustafaAldabbas/Machine_learning_superstore/blob/main/my%20pic/viz_gross_income_per_day.png) 
+![Gross Income Over Time](https://github.com/MustafaAldabbas/Machine_learning_superstore/blob/main/my%20pic/gross_income__over_time.png)
 ![Seasonal Decomposition](https://github.com/MustafaAldabbas/Machine_learning_superstore/blob/main/my%20pic/seasonal_decomposition.png)
 
 ## Feature Engineering and Selection
@@ -84,6 +84,7 @@ We performed hyperparameter tuning to optimize the models:
 ## Forecasting
 
 Using the Linear Regression, which showed the best performance, we forecasted sales for the next 7 days.
+![Seasonal Decomposition](https://github.com/MustafaAldabbas/Machine_learning_superstore/blob/main/my%20pic/viz_gross_income_per_day.png)
 
 ## Streamlit App
 
