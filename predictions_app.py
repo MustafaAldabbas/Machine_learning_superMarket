@@ -78,21 +78,22 @@ ada_rmse = np.sqrt(mean_squared_error(y_test, ada_predictions))
 st.set_page_config(page_title="Retail Sales Forecasting", layout="wide")
 
 # Sidebar navigation
-st.sidebar.title("Navigation")
-pages = st.sidebar.radio("Go to", ["Introduction", "Project Goals", "EDA", "Modeling", "Forecasting", "Conclusion", "Project Achievements"])
+st.sidebar.title("Sales Predictions Project")
+pages = st.sidebar.radio("Go to", ["Introduction", "Workflow & Objectives", "EDA", "Modeling", "Forecasting", "Achievement and conclusion",])
 
 # Authors section in sidebar
 st.sidebar.markdown("### Authors")
-st.sidebar.image('/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_superstore/my pic/Mustafa HS2.jpg', width=200)
+st.sidebar.image('/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_superstore/my pic/Mustafa HS2.jpg', width=100)
 st.sidebar.markdown("Mustafa Aldabbas")
 st.sidebar.markdown("[LinkedIn](https://www.linkedin.com/in/your-linkedin-id/)")
-st.sidebar.image('/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_superstore/my pic/cv photo .jpg', width=200)
+st.sidebar.image('/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_superstore/my pic/cv photo .jpg', width=100)
 st.sidebar.markdown("Natalia Gravereaux")
 st.sidebar.markdown("[LinkedIn](https://www.linkedin.com/in/another-linkedin-id/)")
 
 # Introduction page
 if pages == "Introduction":
-    st.title("Retail Sales Forecasting 📈")
+    st.markdown('<h1 style="color: LightBlue;">Retail Sales Forecasting 📈 </h1>', unsafe_allow_html=True)
+    st.image ('/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_superstore/my pic/retail forcasting .png', width=1000)
     st.markdown("""
     ## Introduction
     ##### **Welcome to the Retail Sales Forecasting project!**
@@ -109,10 +110,7 @@ if pages == "Introduction":
     - **Unit price:** the price of each unit purchsed.<br>
     - **quantity:** The numer of purchesed articles<br>
     - **Gross:** Total gross<br>
-    ### Objective
-    - predict one week of future sales based on the historial data
-    - Predict one week oof future gross income based on the historical data
-    - helping the store to manage inventory and optimize sales strategies.
+   
     """, unsafe_allow_html=True)
     tab1, tab2, tab3 = st.tabs(["Original Data", "Combined Data", "Encoded Data"])
     with tab1:
@@ -121,13 +119,14 @@ if pages == "Introduction":
         st.dataframe(df_combined.head())
     with tab3:
         st.dataframe(df_encoded.head())
-
+ 
 # Project Goals page
-elif pages == "Project Goals":
-    st.title("Project Goals 🎯")
+elif pages == "Workflow & Objectives":
+    st.title("Workflow and Objectives 🎯")
+    st.image ('/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_superstore/my pic/workflow .jpg', width=1000)
     st.markdown("""
-    ## Project Goals<br>
-    In this project, we will cover several key steps in preparing data for machine learning and employing various predictive models to forecast future supermarket sales. Our main objectives include:<br>
+    ## Workflow 
+    In this project, we will cover several key steps in preparing data for machine learning and employing various<br> predictive models to forecast future supermarket sales. Our main objectives include:<br>
     - **Data Preparation:** Preparing the data for machine learning.<br>
     - **Exploratory Data Analysis (EDA):** Conducting EDA to understand the data.<br>
     - **Feature Engineering:** Applying techniques like lag, moving average, and one-hot encoding.<br>
@@ -145,13 +144,24 @@ elif pages == "Project Goals":
     - **Hyperparameter Tuning:** Tuning hyperparameters for optimal model performance.<br>
     - **Model Training and Testing:** Training the models and testing their performance.<br>
     - **Model Selection and Prediction:** Choosing the best model and predicting future sales.
+    ## **Objective**
+    - predict one week of future sales based on the historial data
+    - Predict one week oof future gross income based on the historical data
+    - helping the store to manage inventory and optimize sales strategies.
     """, unsafe_allow_html=True)
 
 # EDA page
 elif pages == "EDA":
     st.title("Exploratory Data Analysis (EDA) 📊")
     st.markdown("## Data Visualization")
-    st.markdown("#### Total Sales Over Time")
+    ## Exploratory Data Analysis EDA
+    st.markdown("""
+    - #### **Plot the total sales over time to identify any trends or patterns.**
+    - #### **Perform a seasonal decomposition to understand the trend, seasonality, and residual components.**
+   
+   
+    """, unsafe_allow_html=True)
+    
     fig, ax = plt.subplots(figsize=(12, 6))
     ax.plot(sales_by_date['date'], sales_by_date['total'], marker='o')
     ax.set_title('Total Sales Over Time')
@@ -174,6 +184,7 @@ elif pages == "EDA":
 elif pages == "Modeling":
     st.title("Modeling 🧠")
     st.markdown("## Model Development and Evaluation")
+    st.image ('/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_superstore/my pic/modeling .jpeg', width=1000)
     tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["Decision Tree", "Random Forest", "Gradient Boosting", "K-Nearest Neighbors", "Linear Regression", "AdaBoost"])
 
     with tab1:
@@ -202,21 +213,26 @@ elif pages == "Forecasting":
     st.image ('/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_superstore/my pic/future prediction approach 2.png', width=1000)
     st.markdown("### Future predictions approach 2")
     st.image ('/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_superstore/my pic/predictions_future.png', width=1000)
+    st.markdown("### Gross income predictions ")
+    st.image ('/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_superstore/my pic/viz_gross_income_per_day.png', width=1000)
     
     
 
    
 
 # Conclusion page
-elif pages == "Conclusion":
-    st.title("Conclusion 🏁")
-    st.markdown("In this project, we explored various machine learning models to forecast retail sales for a global superstore.<br>The K-Nearest Neighbors Regressor provided the best performance with the lowest RMSE.", unsafe_allow_html=True)
-
-# Project Achievements page
-elif pages == "Project Achievements":
-    st.title("Project Achievements 🏆")
+elif pages == "Achievement and conclusion":
+    st.title("Achievements 🏆")
+    st.image ('/Users/mustafaaldabbas/Documents/GitHub/Machine_learning_superstore/my pic/we didt it finally.png', width=1000)
     st.markdown("""
-    In this project, we have achieved the following:<br>
-    - **Sales Prediction:** Predicted the total sales of the supermarket for 7 days using two different approaches with different feature sets, applied across all models.<br>
-    - **Gross Income Prediction:** Predicted the gross income for the supermarket for 7 days.
+    #### In this project, we have achieved the following:
+    - ##### Sales Prediction: Predicted the total sales of the supermarket for 7 days using two different approaches with different feature sets, applied across all models.
+    - ##### Gross Income Prediction: Predicted the gross income for the supermarket for 7 days.
     """, unsafe_allow_html=True)
+    st.markdown('<h1 style="color: Red;">Conclusion 🏁</h1>', unsafe_allow_html=True)
+    st.markdown(""" 
+    - In this project, we explored various machine learning models to forecast retail sales for a global superstore.<br>
+    - The K-Nearest , Random FOrest regressor and Neighbors Regressor provided the best performance with the lowest RMSE.
+                ,
+      """, unsafe_allow_html=True)
+    
